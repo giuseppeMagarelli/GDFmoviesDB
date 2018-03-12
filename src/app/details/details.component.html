@@ -1,0 +1,35 @@
+<div class="ui container">
+  <h2>{{ selectedMovie?.title }}</h2>
+
+  <div id="main" >
+    <div id="content">
+
+      <div>
+
+          <!-- gatunki -->
+          <div><b>Genre Movie:</b>
+            <span *ngFor="let genre of selectedMovie?.genres"> {{ genre.name }}</span>
+          </div>
+
+          <div>
+            <div><b>Overview</b></div>
+            {{ selectedMovie?.overview }}
+              <div><b>Vote Average</b></div>
+              {{ selectedMovie?.vote_average }}
+              <div><b>Vote Count</b></div>
+              {{ selectedMovie?.vote_count }}
+              <div><b>Popularity</b></div>
+              {{ selectedMovie?.popularity}}
+              <div><b>Release date</b></div>
+              {{ selectedMovie?.release_date }}
+          </div>
+      </div>
+    </div>
+
+    <div class="computer column">
+        <button (click)="back()">
+          <span>Back</span>
+        </button>
+      </div>
+  </div>
+</div>

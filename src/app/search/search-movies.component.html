@@ -1,0 +1,27 @@
+<div class="ui container">
+  <div class="ui grid">
+    <div class="wide computer column">
+    </div>
+  </div>
+
+  <div class="link cards">
+    <div class="card" *ngFor="let movie of movies" [routerLink]="['/movie/'+movie.id]" routerLinkActive="active">
+        <img class="ui middle aligned medium image" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+    </div>
+  </div>
+
+  <div class="ui equal width grid">
+
+    <div class="computer column">
+      <button (click)="goPage(-1)">
+        <span>Previous</span>
+      </button>
+    </div>
+
+    <div class="computer column">
+        <button (click)="goPage(1)">
+          <span>Next</span>
+        </button>
+      </div>
+  </div>
+</div>
